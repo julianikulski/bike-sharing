@@ -1,6 +1,6 @@
 # Predicting bike sharing demand using tree-based ensemble methods
 
-
+This project uses AdaBoost, Random Forests and XGBoost to predict bike sharing demand in the metro DC area in the United States (data provided by Capital Bikeshare) using data between January 1, 2011, and December 31, 2018. The models are compared using three different performance measures (mean average error, root mean squared error, root mean squared log error) and compared against a naive baseline model (last value model). 
 
 ## Table of Contents
 * [Installation](#Installation)
