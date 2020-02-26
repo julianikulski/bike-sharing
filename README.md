@@ -45,15 +45,18 @@ This project includes two Jupyter notebooks, three pickled files and one csv fil
 ## Results
 The main findings of the analysis will be published on [Medium](https://medium.com/@julia.nikulski). A short overview of the results shall be given here:
 
-* The last value model is slightly outperforming all three ML models on the MAE --> this indicates that the ML algorithms are more moderately overpredicting compared to the last value approach which is more significantly deviating from the true value in more instances
+* The last value model is slightly outperforming all three ML models on the MAE --> this indicates that the ML algorithms are more moderately overpredicting compared to the last value approach which is more significantly deviating from the true value in more instances. This also means that the last value approach is rather good for predicting the demand of the next day compared to the advanced models which can be explained by the high autocorrelation of the target value
 * XGBoost has the lowest MAE and RMSE of the three ML models while Random Forests has the lowest RMSLE --> this indicates that Random Forests overpredicts rather than underpredicts more often and heavily than the other two ML models
 * Comparing the prediction of stationary versus non-stationary target values shows that XGBoost is performing slightly worse when non-stationary target values are used, while AdaBoost and Random Forests perform slightly better (except for the RMSLE)
 * Analyzing how noise is handled by these algorithms by removing the weekday features (which only have small variations in the target distribution) shows that XGBoost is performing slightly worse without the weekday feature while AdaBoost and Random Forests are handling noisy data not as well, demonstrated by worse performances when the weekday features are included
 * Comparing cross-validation times, XGBoost is the fastest model of the three ML models
 
 ## Limitations
-
-
+There are a number of limitations of this project and the chosen implementation:
+* lagged historical weather data was used to account for look-ahead bias and because weather forecast data is difficult to obtain --> the model results may have been better if forecast instead of realized weather from the day before would have been used
+* the forecast horizon is only 1 day --> in reality, it would be necessary to add forecasts for multiple periods and for more periods in the future (1 week, 1 month, 6 months etc.)
+* additional features aside from temporal and meteorological features could improve the ML model performances
+* the three tree-based ensemble methods should be compared against other ML algorithms and more traditional statistical methods (e.g. ARIMA) so that their contribution to the overall aim of achieving accurate demand predictions can be assessed
 
 ## Licensing, Authors, Acknowledgements <a name="licensing"></a>
 The data used for the analysis comes from:
