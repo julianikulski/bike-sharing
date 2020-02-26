@@ -31,13 +31,15 @@ To answer this question I used three different algorithms:
 * Random Forests
 * XGBoost
 
-I used three different performance metrics:
+In addition to those three advanced machine learning models, I also used a naive baseline model (last value method) to compare the ML models' performances to a benchmark.
+
+I used three different performance metrics to determine how well these models can predict bike sharing:
 * MAE (mean average error)
 * RMSE (root mean squared error)
 * RMSLE (root mean squared log error)
 
 ## File Description <a name="description"></a>
-This project includes one Jupyter notebook with all code required for analyzing the data and creating a supervised machine learning algorithm.
+This project includes two Jupyter notebooks, three pickled files and one csv file. The .ipynb file titled 'dataset_creation.ipynb' contains the code that creates the csv file 'bike_sharing_dataset.csv' that is used by the file 'bike_sharing_demand.ipynb' to implement the ML algorithms. The three different .sav files include the best saved ML models.
 
 ## Results
 The main findings of the analysis will be published on [Medium](https://medium.com/@julia.nikulski). A short overview of the results shall be given here:
