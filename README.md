@@ -1,12 +1,13 @@
 # Predicting bike sharing demand using tree-based ensemble methods
 
-This project uses AdaBoost, Random Forests and XGBoost to predict bike sharing demand in the metro DC area in the United States (data provided by Capital Bikeshare) using data between January 1, 2011, and December 31, 2018. The models are compared using three different performance measures (mean average error, root mean squared error, root mean squared log error) and compared against a naive baseline model (last value model). 
+This project uses AdaBoost, Random Forests and XGBoost to predict bike sharing demand in the metro DC area in the United States (data provided by Capital Bikeshare) using data between January 1, 2011, and December 31, 2018. The models are compared using three different performance measures (mean average error, root mean squared error, root mean squared log error) and compared against a naive baseline model (last value model).
 
 ## Table of Contents
 * [Installation](#Installation)
 * [Project Motivation and Description](#motivation)
 * [File Description](#description)
 * [Results](#Results)
+* [Limitations](#Limitations)
 * [Licensing, Authors, Acknowledgements](#licensing)
 
 ## Installation
@@ -44,6 +45,13 @@ This project includes two Jupyter notebooks, three pickled files and one csv fil
 ## Results
 The main findings of the analysis will be published on [Medium](https://medium.com/@julia.nikulski). A short overview of the results shall be given here:
 
+* The last value model is slightly outperforming all three ML models on the MAE --> this indicates that the ML algorithms are more moderately overpredicting compared to the last value approach which is more significantly deviating from the true value in more instances
+* XGBoost has the lowest MAE and RMSE of the three ML models while Random Forests has the lowest RMSLE --> this indicates that Random Forests overpredicts rather than underpredicts more often and heavily than the other two ML models
+* Comparing the prediction of stationary versus non-stationary target values shows that XGBoost is performing slightly worse when non-stationary target values are used, while AdaBoost and Random Forests perform slightly better (except for the RMSLE)
+* Analyzing how noise is handled by these algorithms by removing the weekday features (which only have small variations in the target distribution) shows that XGBoost is performing slightly worse without the weekday feature while AdaBoost and Random Forests are handling noisy data not as well, demonstrated by worse performances when the weekday features are included
+* Comparing cross-validation times, XGBoost is the fastest model of the three ML models
+
+## Limitations
 
 
 
