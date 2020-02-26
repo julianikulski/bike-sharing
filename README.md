@@ -4,7 +4,7 @@
 
 ## Table of Contents
 * [Installation](#Installation)
-* [Project Motivation](#motivation)
+* [Project Motivation and Description](#motivation)
 * [File Description](#description)
 * [Results](#Results)
 * [Licensing, Authors, Acknowledgements](#licensing)
@@ -12,8 +12,17 @@
 ## Installation
 The code requires Python versions of 3.* and general libraries available through the Anaconda package.
 
-## Project Motivation <a name="motivation"></a>
+## Project Motivation and Description <a name="motivation"></a>
+Climate change is forcing cities to reconsider their transportation infrastructure. Bike sharing is a more sustainable mode of transportation that reduces greenhouse gas emissions and other air pollutants. For bike sharing companies it is important to ensure that enough bikes are available at stations but not too many so that stations are not crowded with unnecessary bikes. Avoiding oversupply and shortages of bikes leads to happier customers and thus, knowing future demand becomes essential. There is already a broad body of literature that uses different features, algorithms, forecasting horizons and location-levels to predict demand in bike sharing systems.
 
+However, there currently does not exist a comparison between different tree-based ensemble methods. These models have a number of advantages:
+* ease of understanding and visualization of the algorithm
+* yield better results than underlying weak learners
+* nonparametric nature and ability to handle mixed data types
+* robustness against overfitting, outliers, noise, multi-collinearity, and input scaling
+* computationally relatively inexpensive
+
+Therefore, this project wants to contribute to the research in the area of bike sharing demand to handle oversupply and shortages of bikes by answering the following research question:
 
 #### How do tree-based ensemble models compare when predicting bike sharing demand?
 
