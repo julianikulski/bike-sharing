@@ -43,7 +43,7 @@ I used three different performance metrics to determine how well these models ca
 This project includes two Jupyter notebooks, three pickled files and one csv file. The .ipynb file titled 'dataset_creation.ipynb' contains the code that creates the csv file 'bike_sharing_dataset.csv' that is used by the file 'bike_sharing_demand.ipynb' to implement the ML algorithms. The three different .sav files include the best saved ML models.
 
 ## Results
-The main findings of the analysis will be published on [Medium](https://medium.com/@julia.nikulski). A short overview of the results shall be given here:
+A summary of the main findings and lessons of this project can be found in this blog post on [Medium](https://towardsdatascience.com/go-highly-accurate-or-go-home-61828afb0b13). A short overview of the results shall be given here:
 
 * The last value model is slightly outperforming all three ML models on the MAE --> this indicates that the ML algorithms are more moderately overpredicting compared to the last value approach which is more significantly deviating from the true value in more instances. This also means that the last value approach is rather good for predicting the demand of the next day compared to the advanced models which can be explained by the high autocorrelation of the target value
 * XGBoost has the lowest MAE and RMSE of the three ML models while Random Forests has the lowest RMSLE --> this indicates that Random Forests overpredicts rather than underpredicts more often and heavily than the other two ML models
